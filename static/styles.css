@@ -1,0 +1,231 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f0f0f0; /* Set a background color */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+}
+
+/* Style for the transparent header */
+.transparent-header {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 1em;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the header */
+header {
+    padding: 1em;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('img4.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 250px;
+}
+
+/* Style for h1 */
+h1 {
+    padding: 1em;
+    color: white;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+}
+
+/* Style for wider sections */
+section.wider-section {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for navigation links */
+nav {
+    display: flex;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+/* Style for sections */
+section {
+    max-width: 100%;
+    padding: 3em;
+    background-color: rgb(254, 245, 245);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for welcome message */
+.welcome-message {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+/* Style for chatbox */
+#chatbox {
+    height: 230px;
+    overflow-y: auto;
+    padding: 10px;
+    max-height: 300px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Hide arrows in chatbox */
+#chatbox::before {
+    display: none;
+}
+
+/* Style for user input */
+#userInput {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    flex-grow: 1;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 0 2px black;
+}
+
+button {
+    padding: 0.5em 1em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add underline to section headings */
+#legalPracticeAreas h2,
+#contactInformation h2 {
+    text-decoration: underline;
+}
+
+/* Reduce top margin for specific sections */
+#legalPracticeAreas,
+#contactInformation {
+    margin-top: 2em;
+}
+
+/* Style for contact information */
+#contactInformation p,
+#contactInformation address {
+    margin-bottom: 1em;
+}
+
+#contactInformation a {
+    color: #333;
+}
+
+#contactInformation address::before {
+    content: "Location: ";
+    font-weight: bold;
+}
+
+/* Adjust size and margin for logo */
+#logo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Style for footer */
+footer {
+    background-color: #111;
+    color: white;
+    padding: 0.5em;
+    
+}
+/* Style for footer image */
+#footerimg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 200px; /* Adjust the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-block-start: -40%;
+}
+
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5em;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0.3em;
+    position: relative;
+    display: flex;
+}
+
+.footer-links a::before {
+    content: '♦';
+    margin-right: 0.2em;
+}
+
+.footer-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+
+.footer-info img {
+    max-width: 65%;
+    margin-right: 6.5em;
+    margin-block-start: -40%;
+    align-items:end;
+}
+
+.contact-details {
+    text-align: left;
+    margin-block-start: -14%;
+}
+
+/* Reduce bottom margin for footer */
+footer {
+    margin-bottom: 0;
+}
+
+/* Style for lawyer photos */
+.lawyer-photo {
+    max-width: 100px; /* Adjust the maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Style for footer image */
+#footerimg {
+    max-width: 200px; /* Adjust the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-block-start: -40%
+}

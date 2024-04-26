@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    {% load static %}
+    <link rel="stylesheet" href='{% static "styles.css"%}'>
+</head>
+<body>
+
+    <header>
+        {% load static %}
+        <img src='{% static "img1.png" %}' alt="Logo" id="logo">
+        <h1>Law Chatbot</h1>
+        <nav>
+            <a href="{% url 'chatbot' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            
+        </nav>
+    </header>
+<section id="legalPracticeAreas">
+    <h2>Legal Practice Areas</h2>
+    <ol>
+        <li><strong>Constitutional Law:</strong>
+            <ul>
+                <li>Fundamental rights and freedoms</li>
+                <li>Judicial review</li>
+                <li>Constitutional amendments</li>
+                <li>Center-state relations</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li>
+        <li><strong>Criminal Law:</strong>
+            <ul>
+                <li>Offenses and penalties</li>
+                <li>Criminal procedures</li>
+                <li>Bail and anticipatory bail</li>
+                <li>Evidence and witnesses</li>
+                <p>______________________________________________</p>
+            </ul> 
+        </li>
+        <li><strong>Civil Law:</strong>
+            <ul>
+                <li>Contracts and agreements</li>
+                <li>Property rights and disputes</li>
+                <li>Tort claims and liabilities</li>
+                <li>Debt recovery and bankruptcy</li>
+                <p>______________________________________________</p>
+            </ul> 
+        </li>       
+        <li><strong>Family Law:</strong>
+            <ul>
+                <li>Marriage, divorce, and separation</li>
+                <li>Child custody and support</li>
+                <li>Adoption and guardianship</li>
+                <li>Maintenance and alimony</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li>   
+        <li><strong>Labor and Employment Law:</strong>
+            <ul>
+                <li>Employment contracts</li>
+                <li>Workplace harassment</li>
+                <li>Wage and hour regulations</li>
+                <li>Employment termination</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li> 
+        <li><strong>Intellectual Property Law:</strong>
+            <ul>
+                <li>Copyrights and trademarks</li>
+                <li>Patent registration and protection</li>
+                <li>Trade secrets and condential information</li>
+                <li>Intellectual property infringement</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li> 
+        <li><strong>Commercial Law:</strong>
+            <ul>
+                <li>Company formation and registration</li>
+                <li>Contractual disputes</li>
+                <li>Corporate governance</li>
+                <li>Mergers and acquisitions</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li> 
+        <li><strong>Tax Law:</strong>
+            <ul>
+                <li>Income tax regulations</li>
+                <li>Goods and Services Tax (GST)</li>
+                <li>Tax planning and exemptions</li>
+                <li>Tax disputes and appeals</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li> 
+        <li><strong>Real Estate Law/ RERA:</strong>
+            <ul>
+                <li>Property purchase and sale agreements</li>
+                <li>Landlord-tenant disputes</li>
+                <li>Property registration and titles</li>
+                <li>Development and construction regulations</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li>    
+        <li><strong>Consumer Law:</strong>
+            <ul>
+                <li>Consumer rights and protections</li>
+                <li>Product liability</li>
+                <li>Unfair trade practices</li>
+                <li>Consumer disputes and redressal</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li> 
+        <li><strong>Banking and Finance Law:</strong>
+            <ul>
+                <li>Banking regulations</li>
+                <li>Loan agreements and securities</li>
+                <li>Debt recovery and insolvency</li>
+                <li>Financial fraud and scams</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li> 
+        <li><strong>Environmental Law:</strong>
+            <ul>
+                <li>Pollution control and prevention</li>
+                <li>Conservation of natural resources</li>
+                <li>Environmental impact assessments</li>
+                <li>Forest and wildlife protection</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li>  
+
+        <li><strong>Administrative Law:</strong>
+            <ul>
+                <li>Government decision-making processes</li>
+                <li>Administrative tribunals</li>
+                <li>Right to information</li>
+                <li>Judicial review of administrative actions</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li> <li><strong>Cyber Law:</strong>
+            <ul>
+                <li>Data protection and privacy</li>
+                <li>Cybercrime and cybersecurity</li>
+                <li>Electronic contracts and transactions</li>
+                <li>Social media and online defamation</li>
+                <p>______________________________________________</p>
+            </ul>
+        </li> 
+    </ol>
+</section>

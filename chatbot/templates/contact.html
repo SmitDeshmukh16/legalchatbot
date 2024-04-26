@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        .space {
+            margin-bottom: 20px; /* You can adjust this value as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        {% load static %}
+        <img src="{% static 'img1.png' %}" alt="Logo" id="logo">
+        <h1>Law Chatbot</h1>
+        <nav>
+            <a href="{% url 'chatbot' %}">Home</a>
+            
+            <a href="{% url 'about' %}">About</a>
+        </nav>
+    </header>
+
+    <section id="contactDetails">
+        <p class="space"><em>In case you need Lawyers......</em></p>
+        <h2>Lawyers</h2>
+        
+
+        <div class="lawyer">
+            {% load static %}
+            <img src="{% static 'pic1.jpeg' %}" alt="Lawyer 1 Photo" class="lawyer-photo">
+            <h2>Adv. Samarth Kapoor</h2>
+            <p>Associate Lawyer, Litigation - Dispute Resolution,King Stubb and Kasiva</p>
+            <p>E-4, Block E, Pandav Nagar, Mayur Vihar Phase 1, New Delhi - 110091</p>
+            <p>Contact No.: <a href="tel:9412661939">9412661939</a></p>
+            <p>______________________________________________</p>
+        </div>
+        
+
+        <div class="lawyer">
+            {% load static %}
+            <img src="{% static 'pic2.jpeg' %}" alt="Lawyer 2 Photo" class="lawyer-photo">
+            <h2>Adv. Mohnish Sharma</h2>
+            <p>Legal content Manager and Admin head at TLT JUDICIAL ACADEMY.</p>
+            <p>127 MIG J-sector Ayodhya Nagar, Bhopal</p>
+            <p>Contact No.: <a href="tel:7000925067">7000925067</a></p>
+            <p>______________________________________________</p>
+        </div>
+
+        <div class="lawyer">
+            {% load static %}
+            <img src="{% static 'pic3.jpeg' %}" alt="Lawyer 2 Photo" class="lawyer-photo">
+            <h2>Adv. Khan Mohammad Kaif</h2>
+            <p>Advocate at Sessions and High Court, Maharashtra</p>
+            <p>Aurangabad, Maharashtra</p>
+            <p>Contact No.: <a href="tel:8999550908">8999550908</a></p>
+            <p>______________________________________________</p>
+        </div>
+
+        <div class="lawyer">
+            {% load static %}
+            <img src="{% static 'pic4.jpeg' %}" alt="Lawyer 2 Photo" class="lawyer-photo">
+            <h2>Adv. Abhijeet Mittal</h2>
+            <p>Associate Lawyer, RNC Legal, Gurgaon</p>
+            <p>4515/Block F Sector 23A, Gurgaon</p>
+            <p>Contact No.: <a href="tel:9752222527">9752222527</a></p>
+            <p>______________________________________________</p>
+        </div>
+    </section>
+
+</body>
+</html>

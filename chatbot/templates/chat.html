@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law Chatbot</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+    <header>
+        {% load static %}
+        <a href="https://www.india.gov.in/topics/law-justice" target="_blank"><img src="{% static 'img1.png' %}" alt="Logo" id="logo"></a>
+        <h1>Law Chatbot</h1>
+        <nav>
+            <a href="{% url 'chatbot' %}">Home</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="{% url 'about' %}">About</a>
+        </nav>
+    </header>
+   
+
+    <section class="animated">
+        <p class="welcome-message">Hi, do you need any legal advice?</p>
+        <div id="chatbox"></div>
+        
+        <div id="userInput">
+            <input type="text" id="userMessage" placeholder="Type your message..." >
+            <button onclick="sendMessage()">Send</button>
+
+        </div>
+    </section>
+    {% csrf_token %}
+    <script>
+        function sendMessage() {
+            var userMessage = document.getElementById('userMessage').value;
+            const chatbox = document.getElementById('chatbox');
+             
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+             // Display user message in the chatbox
+            chatbox.innerHTML += `<p><strong>You:</strong> ${userMessage}</p>`;
+
+             // Send user message to the Django backend using AJAX and fetch API
+            fetch('{% url "chatbot" %}', {
+                method: 'POST',
+                body: "userMessage=" + userMessage,
+                headers: { "Content-Type": "application/x-www-form-urlencoded",'X-CSRFToken': csrftoken}
+            })
+            .then(response => response.json())
+            .then(data => {
+                const chatbotResponse = data.response;
+                chatbox.innerHTML += `<p><strong>Chatbot:</strong> ${chatbotResponse}</p>`;
+
+                 // Clear the user input field
+                document.getElementById('userMessage').value = '';
+
+                 // Scroll to the bottom of the chatbox
+                chatbox.scrollTop = chatbox.scrollHeight;
+            })
+            .catch(error => console.error(error));
+        }
+    
+    </script>
+<footer>
+    <div class="footer-links">
+        <p><strong>IMPORTANT LINKS:</strong></p>
+        <a href="https://www.india.gov.in/topics/law-justice" target="_blank">National Portal of India</a>
+        <a href="http://www.liiofindia.org/" target="_blank">Legal Information</a>
+        <a href="https://lawmin.gov.in/" target="_blank">Ministry of Law India</a>
+        <a href="https://www.g20.in/en/" target="_blank">G20 India</a>
+    </div>
+
+        
+        {% load static %}
+        <a href="http://www.liiofindia.org/databases.html" target="_blank"><img src='{% static "img2.jfif" %}' alt="Footer Image"></a>
+        
+    </div>
+</footer>
+   
+</body>
+</html>
