@@ -4,8 +4,8 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.chains import ConversationalRetrievalChain
 
-os.environ["OPENAI_API_KEY"] = "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"
-os.environ["HUGGINGFACEHUB_API_TOKEN"] ="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"
+os.environ["OPENAI_API_KEY"] = "Enter_OpenAi_API"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] ="_Enter_API_KEY"
 
 chat_history = []
 vector_db = FAISS.load_local("dataset",HuggingFaceEmbeddings(),allow_dangerous_deserialization=True)
